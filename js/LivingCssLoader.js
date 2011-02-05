@@ -49,8 +49,16 @@
 
          // - - - - Inner Methods:
 
+         /**
+          * Gets the user-agent.  Note that the conventional rule against using 'navigator.userAgent' here does not 
+          * apply, as we are not trying to detect any one particular feature but rather the user-agent type as a whole.
+          * User-agents apply proprietary css namespaces, so we need to find the actual user agent.  
+          * @return string The user-agent string that corresponds to the target directory created by the build.
+          */
          function getUserAgentDirectory() {
-             var sUA = navigator.userAgent;
+
+             // Note that the conventional rule against using 'navigator.userAgent' here does not apply; see method js-doc above.
+             var sUA = navigator.userAgent;  
 
              if(/Firefox/.test( sUA )) {
                  
