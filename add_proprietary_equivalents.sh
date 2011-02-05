@@ -30,7 +30,7 @@
 #  Use this utility where otherwise you would have to manually add proprietary namespace prefixes 
 #  to CSS rule identifiers and CSS property values.  
 #
-#  This utility works but could be much improved and extended.
+#  This utility works but is at a primitive stage and could be much improved and extended.
 #
 #  This runs on the Bash shell, which also runs on Windows under Cygwin (http://cygwin.com).
 #
