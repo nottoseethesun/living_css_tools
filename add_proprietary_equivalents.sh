@@ -20,28 +20,28 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 #  This utility allows one to develop a single "living-standard" (also known as "HTML5") CSS file or a 
-# single set of such CSS files and have them automatically ported to support all major, 
-# reasonably up-to-date Web browsers.
+#  single set of such CSS files and have them automatically ported to support all major, 
+#  reasonably up-to-date Web browsers.
 #
-# This file, in conjunction with the CSS Loader JavaScript and Chrome Frame utilities
-# in this repository, opens up the world of the CSS flexible box module, CSS transformations, and more
-# to cross-browser Web development.
+#  This file, in conjunction with the CSS Loader JavaScript and Chrome Frame utilities
+#  in this repository, opens up the world of the CSS flexible box module, CSS transformations, and more
+#  to cross-browser Web development.
 #
-# Use this utility where otherwise you would have to manually add proprietary namespace prefixes 
-# to CSS rule identifiers and CSS property values.  
+#  Use this utility where otherwise you would have to manually add proprietary namespace prefixes 
+#  to CSS rule identifiers and CSS property values.  
 #
-# This utility works but could be much improved and extended.
+#  This utility works but could be much improved and extended.
 #
-# This runs on the Bash shell, which also runs on Windows under Cygwin (http://cygwin.com).
+#  This runs on the Bash shell, which also runs on Windows under Cygwin (http://cygwin.com).
 #
-# To run on most Bash environments, this file must be in unix format.  Otherwise the error
+#  To run on most Bash environments, this file must be in unix format.  Otherwise the error
 #
 #    $'\r': command not found
 #
-# will be encountered.  To move the file to unix format, use the unix command 'dos2unix', which can also 
-# be found on Cygwin.
+#  will be encountered.  To move the file to unix format, use the unix command 'dos2unix', which can also 
+#  be found on Cygwin.
 #
-# Dependencies:
+#  Dependencies:
 #
 #    These are Bash shell one-liners for use with a version of 'deep.pl', available at:
 #    
