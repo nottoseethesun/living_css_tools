@@ -43,9 +43,9 @@
 #
 #  Dependencies:
 #
-#    These are Bash shell one-liners for use with a version of 'deep.pl', available at:
+#    These are Bash shell one-liners for use with 'deep.pl', available at:
 #    
-#        https://github.com/christopherbalz/deep.pl
+#        http://www.neilgunton.com/doc/deep
 #
 # Author(s): Christopher M. Balz
 # 
