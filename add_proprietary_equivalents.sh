@@ -3,9 +3,11 @@
 ##
 # 
 # This utility allows one to develop a single "living-standard" CSS file or a 
-# single set of CSS files and have them automatically ported to support all major browsers.
+# single set of such CSS files and have them automatically ported to support all major, 
+# reasonably up-to-date Web browsers.
+#
 # This file, in conjunction with the CSS Loader JavaScript and Chrome Frame utilities
-# in this file, opens up the world of CSS flexible box module and transformations and more
+# in this repository, opens up the world of the CSS flexible box module, CSS transformations, and more
 # to cross-browser Web development.
 #
 # Use this utility where otherwise you would have to manually add proprietary namespace prefixes 
