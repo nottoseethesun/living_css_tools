@@ -17,11 +17,12 @@
 #
 # This runs on the Bash shell, which also runs on Windows under Cygwin (http://cygwin.com).
 #
-# To run on most Bash environments, this file must be in utf-8-unix encoding.  Otherwise the error
+# To run on most Bash environments, this file must be in unix format.  Otherwise the error
 #
 #    $'\r': command not found
 #
-# will be encountered.
+# will be encountered.  To move the file to unix format, use the unix command 'dos2unix', which can also 
+# be found on Cygwin.
 #
 # Dependencies:
 #
