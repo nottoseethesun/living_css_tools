@@ -1,3 +1,11 @@
-To use this tool, read the comments in the 'add_proprietary_css.sh' script.
+Allows one to write w3c-compliant CSS once, validatable as CSS3 at w3.org's CSS validator, and have it work on all major browsers (dev channel of Chrome Frame currently required on IE 7, 8, and 9).  Works by building (via a shell script with a Perl script dependency) and loading (via client-side JavaScript) the CSS to work with the prefixed CSS identifiers of current Web browsers.  Helps the user install Chrome Frame on IE 7, 8, and 9, if needed (see detail below).
 
 For an example of CSS created with this script, and loaded appropriately with client-side JavaScript, see the 'demo' directory.
+
+Note especially that currently, this system will ask the user of an IE browser of version less than 10 to install the Developer Version ("channel") of Chrome Frame if the IE browser does not already have a minimum level of Chrome Frame support.  When IE 9 comes out, it will likely not actually require this draconian measure, but until proven otherwise, it is assumed needy.
+
+Usage: To use this tool, start by reading the comments in the 'add_proprietary_equivalents.sh' script.  Note that you will need the boilerplate code in the 'index.html' file in order to properly orchestrate the loading of the CSS and JavaScript files.
+
+
+
+

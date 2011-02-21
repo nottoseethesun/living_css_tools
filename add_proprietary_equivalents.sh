@@ -30,7 +30,7 @@
 #  Use this utility where otherwise you would have to manually add proprietary namespace prefixes 
 #  to CSS rule identifiers and CSS property values.  
 #
-#  This utility works but is at a primitive stage and could be much improved and extended.
+#  This utility works but is at a primitive stage and could be made more reusable, and could be much improved and extended.
 #
 #  This runs on the Bash shell, which also runs on Windows under Cygwin (http://cygwin.com).
 #
@@ -43,10 +43,18 @@
 #
 #  Dependencies:
 #
-#    These are Bash shell one-liners for use with 'deep.pl', available at:
+#    'deep.pl' at '~/util/text-ops/' (change to suit)
+#
+#  These are Bash shell one-liners for use with 'deep.pl', available at:
 #    
 #        http://www.neilgunton.com/doc/deep
 #
+#  Use: 
+# 
+#   'cd' to the directory containing the CSS files to be processed.
+#   Execute this script, like so (no quotes): '../../add_proprietary_equivalents.sh'
+# 
+# 
 # Author(s): Christopher M. Balz
 # 
 
@@ -69,18 +77,18 @@ rm -Rf add_proprietary_equivalents.sh
  
 # Cover the case where the rule identifier is multi-part (e.g., its first part functions as 
 # a namespace ('abc-') for sub-variations:
-~/util/text-ops/deep_with_ee.pl replace '(^\s*|[^\w/]+)(box-|transform-|transition-|animation-|grid-|inline-)([a-z]+)(\s*:\s*)([^;]+;)' '"$1$2$3$4$5 -moz-$2$3$4$5 -webkit-$2$3$4$5 -o-$2$3$4$5"' '*.css' --literal=0 --verbose=1
+~/util/text-ops/deep.pl replace '(^\s*|[^\w/]+)(box-|transform-|transition-|animation-|grid-|inline-)([a-z]+)(\s*:\s*)([^;]+;)' '"$1$2$3$4$5 -moz-$2$3$4$5 -webkit-$2$3$4$5 -o-$2$3$4$5"' '*.css' --literal=0 --verbose=1
 
 # Cover the case where the proprietary prefix is on the CSS property rule identifier, 
 # and the rule identifier is made up of only a single part:
-~/util/text-ops/deep_with_ee.pl replace '(^\s*|[^\w/]+)(grid)(\s*:\s*)([^;]+;)' '"$1$2$3$4 -moz-$2$3$4 -webkit-$2$3$4 -o-$2$3$4"' '*.css' --literal=0 --verbose=1
+~/util/text-ops/deep.pl replace '(^\s*|[^\w/]+)(grid)(\s*:\s*)([^;]+;)' '"$1$2$3$4 -moz-$2$3$4 -webkit-$2$3$4 -o-$2$3$4"' '*.css' --literal=0 --verbose=1
 
 # - - - Section 2: Cover the second case (as described above), where the proprietary prefix 
 #                  is on the CSS property value:
 
 function modifyCssRuleValues() {
-#    ~/util/text-ops/deep_with_ee.pl replace '(^\s*|[^\w/]+)(display)(\s*:\s*)([^;]+;)' '"$1$2$3-moz-$4 $1$2$3-webkit-$4 $1$2$3-o-$4"' '*.css' --literal=0 --verbose=1
-    ~/util/text-ops/deep_with_ee.pl replace '(^\s*|[^\w/]+)(display)(\s*:\s*)([^;]+;)' '"$1$2$3-'$1'-$4"' '*.css' --literal=0 --verbose=1
+#    ~/util/text-ops/deep.pl replace '(^\s*|[^\w/]+)(display)(\s*:\s*)([^;]+;)' '"$1$2$3-moz-$4 $1$2$3-webkit-$4 $1$2$3-o-$4"' '*.css' --literal=0 --verbose=1
+    ~/util/text-ops/deep.pl replace '(^\s*|[^\w/]+)(display)(\s*:\s*)([^;]+;)' '"$1$2$3-'$1'-$4"' '*.css' --literal=0 --verbose=1
 }
 
 mkdir webkit
