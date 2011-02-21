@@ -1,0 +1,3 @@
+To use this tool, read the comments in the 'add_proprietary_css.sh' script.
+
+For an example of CSS created with this script, and loaded appropriately with client-side JavaScript, see the 'demo' directory.

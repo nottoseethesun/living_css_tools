@@ -1,0 +1,30 @@
+/* This single file is used to auto-generate css flex-module content that works everywhere. */
+
+.flex-parent {
+    display: -o-box; 
+    width: 500px;
+    height: 500px;
+    box-orient: horizontal; -moz-box-orient: horizontal; -webkit-box-orient: horizontal; -o-box-orient: horizontal;
+    box-direction: reverse; -moz-box-direction: reverse; -webkit-box-direction: reverse; -o-box-direction: reverse;
+    box-align: center; -moz-box-align: center; -webkit-box-align: center; -o-box-align: center;
+    background-color: yellow;
+}
+
+.flex-inline-child {
+    background-color: lemonchiffon;
+    width: 100px;
+}
+
+.flex-block-child {
+    width: 10em;
+}
+
+.one {
+    background-color: salmon;
+    box-flex: 1.0; -moz-box-flex: 1.0; -webkit-box-flex: 1.0; -o-box-flex: 1.0;
+}
+
+.two {
+    background-color: skyblue;
+    box-flex: 2.0; -moz-box-flex: 2.0; -webkit-box-flex: 2.0; -o-box-flex: 2.0;
+}
